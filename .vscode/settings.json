@@ -1,0 +1,23 @@
+{
+	"files.associations": {
+		"**/templates/**": "django-html",
+		"*.html": "html"
+	},
+	"emmet.includeLanguages": {
+		"django-html": "html",
+		"jinja-html": "html",
+		"html": "html"
+	},
+	"emmet.triggerExpansionOnTab": true,
+	"editor.quickSuggestions": {
+		"other": true,
+		"comments": false,
+		"strings": true
+	},
+	"editor.tabCompletion": "on",
+	"html.validate.scripts": false,
+	"files.exclude": {
+		"**/__pycache__": true,
+		"**/*.pyc": true
+	}
+}
