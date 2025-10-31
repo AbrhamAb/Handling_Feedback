@@ -15,3 +15,17 @@ class ReviewForm(forms.ModelForm):
             'review_text': 'Your Feedback',
             'rating': 'Rating (1-5)',
         }
+
+        error_messages= {
+            'username': {
+                'required': 'Please enter your name.',
+            },
+            'review_text': {
+                'required': 'Please write a review.',
+            },
+            'rating': {
+                'required': 'Please provide a rating between 1 and 5.',
+                'min_value': 'Rating must be at least 1.',
+                'max_value': 'Rating cannot be more than 5.',
+            },
+        }
