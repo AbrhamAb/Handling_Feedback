@@ -35,9 +35,4 @@ class ReviewsListView(ListView):
 class SingleReviewView(DetailView):
     model = Review
     template_name = 'reviews/single_review.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        review_id = self.kwargs.get('pk')
-        context['review'] = Review.objects.get(pk=review_id)
-        return context
+    context_object_name = 'review'
