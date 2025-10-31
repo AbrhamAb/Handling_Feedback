@@ -1,0 +1,15 @@
+{% extends 'reviews/base.html' %}
+
+{% block title %}
+    Review detail
+{% endblock title %}
+
+{% block content %}
+    <h1>Review Detail</h1>
+     <h1>Name: {{ review.username }}</h1> 
+     <h2>Rating: ({{ review.rating }}/5):</h2>
+     <p>Feedback: {{ review.review_text }}</p>
+     <br>
+     <br>
+     <a href="{% url 'review_list' %}">Back to all reviews</a>
+{% endblock content %}
