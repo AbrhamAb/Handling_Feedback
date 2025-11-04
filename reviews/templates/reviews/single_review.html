@@ -12,4 +12,14 @@
      <br>
      <br>
      <a href="{% url 'review_list' %}">Back to all reviews</a>
+     {% if is_favorite %}
+        <strong>This is your favorite review!</strong>
+     
+        {%else%}
+            <form action="/reviews/favorite"method="POST">
+                {% csrf_token %}
+                    <input type="hidden" name="review_id" value="{{ review.id }}">
+                <button>Favorite</button>
+            </form>
+    {% endif %}
 {% endblock content %}
